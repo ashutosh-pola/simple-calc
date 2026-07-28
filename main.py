@@ -1,23 +1,21 @@
-# 1. Ask the user for numbers
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+value1 = input("Enter a number: ")
+value2 = input("Enter another number: ")
+value1 = float(value1)
+value2 = float(value2)
+operator = input("Enter a operator: ")
 
-# 2. Ask for the operation
-print("Choose: +, -, *, /")
-choice = input("Enter choice: ")
-
-# 3. Do the math and show the answer
-if choice == "+":
-    print("Answer:", num1 + num2)
-
-elif choice == "-":
-    print("Answer:", num1 - num2)
-
-elif choice == "*":
-    print("Answer:", num1 * num2)
-
-elif choice == "/":
-    print("Answer:", num1 / num2)
-
-else:
-    print("Invalid choice!")
+while operator not in ["+", "-", "*", "/" ]:
+    print("Invalid operator")
+    operator = input("Enter a operator: ")
+if operator == "+":
+    print(value1 + value2)
+elif operator == "-":
+    print(value1 - value2)
+elif operator == "*":
+    print(value1 * value2)
+elif operator == "/":
+    print(value1/value2)
+elif operator == "^":
+    print(value1 ** value2)
+elif operator == "%":
+    print(value1 % value2)
